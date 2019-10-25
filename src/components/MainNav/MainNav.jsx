@@ -1,6 +1,18 @@
 import React from 'react';
+import { views } from 'commonJS';
+
 
  class MainNav extends React.Component {
+ 	constructor(props) {
+	    super(props);
+	    this.setCurrentView = this.setCurrentView.bind(this);
+    }
+
+    setCurrentView () {
+        let updateState = this.props.updateState;
+
+        updateState({ currentView: views.CONTACT_VIEW });
+    }
 
  	render () {
  		return (
@@ -11,7 +23,7 @@ import React from 'react';
 	    					<a data-section="art">Art</a>
 	    				</li>
 	    				<li className="static-link nav-link">
-	    					<a data-section="contact">Contact</a>
+	    					<a data-section="contact" onClick={this.setCurrentView}>Contact</a>
 	    				</li>
 	    				<li className="overlay-link nav-link">
 	    					<a data-section="resume">Resume</a>

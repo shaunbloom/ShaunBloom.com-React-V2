@@ -19,7 +19,8 @@ module.exports = {
 	resolve: {
 		alias: {
 			MainView     	  : 'src/views/MainView.jsx',
-			applicationStyles : 'src/css/styles.css'
+			applicationStyles : 'src/css/styles.css',
+			commonJS          : path.resolve(__dirname, 'src/js/common.js')
 		},
 		extensions: ['.js', '.jsx']
 	},
