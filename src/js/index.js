@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MainView from '../views/MainView';
+import MainView from 'MainView';
 
 // const App = () => {
 //   return (<MainView />);
