@@ -1,0 +1,36 @@
+.main-nav {
+    position: absolute;
+    margin: -45px auto;
+    width: 43.75em;
+    bottom: 25.31em;
+	height: 2.5em;
+    padding: 0;
+
+    &.loaded {
+		margin: -45px auto 0;
+	  	transition: margin 1s ease;
+	}
+
+    nav ul {
+	    margin: 0;
+	    padding: 0;
+
+	    a {
+		    text-decoration: none;
+		    color: #FFF;
+		    cursor: pointer;
+		}
+		a:hover {
+		  color: #F00;
+		}
+	}
+
+	.nav-link {
+	    display: inline-block;
+	    font-size: 1.87em;
+	    font-weight: bold;
+	    text-shadow: #000 .31em .31em .18em;
+	    text-align: center;
+	    padding: 0 1.28em 0 0;
+	}
+}
