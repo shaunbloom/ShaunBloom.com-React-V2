@@ -16,6 +16,7 @@ module.exports = {
 	devServer: {
 		contentBase: './dist'
 	},
+	devtool: 'cheap-module-eval-sourcemap',
 	resolve: {
 		alias: {
 			MainView     	  : 'src/views/MainView.jsx',
