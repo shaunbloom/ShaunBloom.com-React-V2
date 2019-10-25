@@ -8,25 +8,32 @@ import { views } from 'commonJS';
 class HomeContent extends React.Component {
 	constructor(props) {
 	    super(props);
+		this.state = {
+			currentView: views.HOME_VIEW
+	    };
+	    this.updateState = this.updateState.bind(this);	
+	}
+
+	updateState(stateConfig) {
+		this.setState(()=> {
+			return (stateConfig)
+		});
 	}
 
 	displayHomeOrContact() {
-  		let currentView = this.props.currentView,
-  			updateState = this.props.updateState;
+  		let currentView = this.state.currentView;
 
   		if (currentView === views.HOME_VIEW) {
-  			return <HomeText updateState={updateState} />;
+  			return <HomeText updateState={this.updateState} />;
   		} else if (currentView === views.CONTACT_VIEW) {
-  			return <ContactText updateState={updateState} />;	
+  			return <ContactText updateState={this.updateState} />;	
   		}
   	}
 
 	render () {
-		let updateState = this.props.updateState;
-
 		return (
 			<div>
-				<MainNav updateState={updateState}/>
+				<MainNav updateState={this.updateState}/>
 				<div className="background">
 					<Twinkle />
 					<div className="content fade-in">

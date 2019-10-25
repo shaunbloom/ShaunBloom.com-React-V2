@@ -9,16 +9,8 @@ class MainView extends React.Component {
 	constructor(props) {
 	    super(props);
 	    this.state = {
-	    	showDynamic: false,
-			currentView: views.HOME_VIEW
+	    	showDynamic: false
 	    };
-	    this.updateState = this.updateState.bind(this);	
-	}
-
-	updateState(stateConfig) {
-		this.setState(()=> {
-			return (stateConfig)
-		});
 	}
 
   	render() {
@@ -27,7 +19,7 @@ class MainView extends React.Component {
 		    	<FrameworkNav />
 		    	<div id="wrapper">
 		    		<section id="content" className="drop-shadow main-content">
-		    			<HomeContent currentView={this.state.currentView} updateState={this.updateState}/>
+		    			<HomeContent />
 				    </section>
 				    {this.displayDynamicContent()}
 		    	</div>
