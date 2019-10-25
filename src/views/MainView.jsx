@@ -1,7 +1,7 @@
 import React from 'react';
-import FrameworkNav from '../components/FrameworkNav/FrameworkNav';
-import MainNav from  '../components/MainNav/MainNav';
-import HomeContent from  '../components/HomeContent/HomeContent';
+import FrameworkNav from 'FrameworkNav';
+import MainNav from  'MainNav';
+import HomeContent from  'HomeContent';
 import { views } from 'commonJS';
 
 
