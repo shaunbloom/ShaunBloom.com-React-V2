@@ -1,6 +1,7 @@
 import React from 'react';
 import { views } from 'commonJS';
 
+
 class ContactText extends React.Component {
     constructor(props) {
         super(props);
@@ -15,7 +16,7 @@ class ContactText extends React.Component {
 
     render () {
         return (
-            <article id="contact-page">    
+            <article id="contact-page" key="contact">    
                 <nav>
                     <ul>
                         <li><a id="home-link" onClick={this.setCurrentView}>Home</a></li>

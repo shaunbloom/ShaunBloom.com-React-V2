@@ -6,3 +6,9 @@ export const views = {
 	RESUME_VIEW   : 'resume',
 	PORTOLIO_VIEW : 'portfolio'
 };
+
+export const times = {
+	SLOW     : 1500,
+	MEDIUM   : 1000,
+	FAST     : 500
+};

@@ -3,7 +3,8 @@ import MainNav from 'MainNav';
 import Twinkle from 'Twinkle';
 import HomeText from 'HomeText';
 import ContactText from 'ContactText';
-import { views } from 'commonJS';
+import { views, times } from 'commonJS';
+import FadeProps from 'fade-props';
 
 class HomeContent extends React.Component {
 	constructor(props) {
@@ -14,21 +15,21 @@ class HomeContent extends React.Component {
 	    this.updateState = this.updateState.bind(this);	
 	}
 
-	updateState(stateConfig) {
+	updateState (stateConfig) {
 		this.setState(()=> {
 			return (stateConfig)
 		});
 	}
 
-	displayHomeOrContact() {
-  		let currentView = this.state.currentView;
+	getContent () {
+		let currentView = this.state.currentView;
 
   		if (currentView === views.HOME_VIEW) {
   			return <HomeText updateState={this.updateState} />;
   		} else if (currentView === views.CONTACT_VIEW) {
   			return <ContactText updateState={this.updateState} />;	
-  		}
-  	}
+  		}	
+	}
 
 	render () {
 		return (
@@ -36,9 +37,9 @@ class HomeContent extends React.Component {
 				<MainNav updateState={this.updateState}/>
 				<div className="background">
 					<Twinkle />
-					<div className="content fade-in">
-						{this.displayHomeOrContact()}
-					</div>
+					<FadeProps animationLength={times.MEDIUM}>
+      					{this.getContent()}
+      				</FadeProps>
 				</div>
 			</div>
 		);
