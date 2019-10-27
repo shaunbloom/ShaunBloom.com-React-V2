@@ -8,22 +8,32 @@ import { views } from 'commonJS';
 	    this.setCurrentView = this.setCurrentView.bind(this);
     }
 
-    setCurrentView () {
-        let updateState = this.props.updateState;
+    setCurrentView (e) {
+    	e.preventDefault();
+    	let newView   = e.target.dataset.section,
+    		stateObj = {};
 
-        updateState({ currentView: views.CONTACT_VIEW });
+        const updateState = this.props.updateState;
+
+        stateObj.currentView = newView;
+
+        if (newView !== views.CONTACT) {
+			stateObj.showDynamic = true;        	
+        }
+
+        updateState(stateObj);
     }
 
  	render () {
  		return (
- 			<header id="main" className="main-nav loaded">
+ 			<header id="main" className="main-nav loaded"  onClick={this.setCurrentView}>
 	    		<nav>
 	    			<ul>
 	    				<li className="overlay-link nav-link">
 	    					<a data-section="art">Art</a>
 	    				</li>
 	    				<li className="static-link nav-link">
-	    					<a data-section="contact" onClick={this.setCurrentView}>Contact</a>
+	    					<a data-section="contact">Contact</a>
 	    				</li>
 	    				<li className="overlay-link nav-link">
 	    					<a data-section="resume">Resume</a>

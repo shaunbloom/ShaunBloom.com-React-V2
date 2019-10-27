@@ -1,3 +1,6 @@
+@import (less) url('../views/artView.less');
+@import (less) url('../views/portfolioView.less');
+@import (less) url('../views/resumeView.less');
 @import (less) url('../components/FrameworkNav/frameworkNav.less');
 @import (less) url('../components/MainNav/MainNav.less');
 @import (less) url('../components/HomeContent/homeContent.less');
@@ -48,6 +51,86 @@ body {
 	    display: block;
 	    top: 14.65em;
 	    z-index: 90;
+	}
+
+	#close {
+	    background: url(http://images.shaunbloom.com/close-button.png) no-repeat scroll 0 0 transparent;
+	    cursor: pointer;
+	    display: block;
+	    height: 34px;
+	    position: absolute;
+	    right: 10px;
+	    width: 34px;
+	    z-index: 3;
+	    top: 10px;
+	}
+}
+
+#dynamic-content {
+	position: relative;
+    top: 0;
+    left: 0;
+    color: #666;
+    height: 800px;
+    z-index: 100;
+
+    p, ul {
+	    float: left;
+	    clear: left;
+	}
+
+    .main-content {
+    	width: 800px;
+	    margin: 20px auto 30px;
+	    background-color: #FFF;
+	    box-shadow: 5px 5px 5px #000;
+	    border: 2px solid #000;
+
+	    h1 {
+	    	display: block;
+		    float: none;
+		    margin-left: 50px;
+		    padding: 0;
+		    color: #666;
+		    font-size: 24px;
+	    }
+    }
+
+    &.art-full-page {
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    padding-top: 20px;
+	    width: 100%;
+	    z-index: 101;
+
+	    #close {
+	    	top: 30px;
+	    }
+
+	    article {
+	    	position: relative;
+		    width: 800px;
+		    margin: 0 auto;
+
+		    img {
+		        border: 2px solid #000;
+			    box-shadow: 5px 5px 5px #000;
+			    display: block;
+			}
+
+			#original-thumb {
+				position: absolute;
+			    top: 10px;
+			    left: 10px;
+			    z-index: 3;
+
+				img {
+				    height: 185px;
+				    width: 155px;
+				}
+			}
+	    }
 	}
 }
 	
