@@ -12,10 +12,10 @@ class HomeContent extends React.Component {
 		this.state = {
 			currentView: views.HOME_VIEW
 	    };
-	    this.updateState = this.updateState.bind(this);	
+	    this.updateMainNavState = this.updateMainNavState.bind(this);	
 	}
 
-	updateState (stateConfig) {
+	updateMainNavState (stateConfig) {
 		this.setState(()=> {
 			return (stateConfig)
 		});
@@ -25,16 +25,18 @@ class HomeContent extends React.Component {
 		let currentView = this.state.currentView;
 
   		if (currentView === views.HOME_VIEW) {
-  			return <HomeText updateState={this.updateState} />;
+  			return <HomeText updateState={this.updateMainNavState} />;
   		} else if (currentView === views.CONTACT_VIEW) {
-  			return <ContactText updateState={this.updateState} />;	
+  			return <ContactText updateState={this.updateMainNavState} />;	
   		}	
 	}
 
 	render () {
+		let updateMainViewState = this.props.updateMainViewState;
+
 		return (
 			<div>
-				<MainNav updateState={this.updateState}/>
+				<MainNav updateMainNavState={this.updateMainNavState} updateMainViewState={updateMainViewState}/>
 				<div className="background">
 					<Twinkle />
 					<FadeProps animationLength={times.MEDIUM}>

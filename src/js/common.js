@@ -4,7 +4,7 @@ export const views = {
 	ART_VIEW      : 'art',
 	CONTACT_VIEW  : 'contact',
 	RESUME_VIEW   : 'resume',
-	PORTOLIO_VIEW : 'portfolio'
+	PORTFOLIO_VIEW : 'portfolio'
 };
 
 export const times = {

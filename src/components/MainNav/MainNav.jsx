@@ -13,15 +13,17 @@ import { views } from 'commonJS';
     	let newView   = e.target.dataset.section,
     		stateObj = {};
 
-        const updateState = this.props.updateState;
+        const updateMainNavState = this.props.updateMainNavState;
+        const updateMainViewState = this.props.updateMainViewState;
 
         stateObj.currentView = newView;
 
-        if (newView !== views.CONTACT) {
-			stateObj.showDynamic = true;        	
+        if (newView !== views.CONTACT_VIEW && newView !== views.HOME_VIEW) {
+			stateObj.showDynamic = true;   
+			updateMainViewState(stateObj);     	
+        } else {
+        	updateMainNavState(stateObj);
         }
-
-        updateState(stateObj);
     }
 
  	render () {
