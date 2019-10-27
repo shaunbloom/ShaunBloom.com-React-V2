@@ -17,14 +17,17 @@ module.exports = {
 	devtool: 'cheap-module-eval-sourcemap',
 	resolve: {
 		alias: {
-			MainView     : path.resolve(__dirname, 'src/views/MainView.jsx'),
-			HomeContent  : path.resolve(__dirname, 'src/components/HomeContent/HomeContent.jsx'),
-			HomeText     : path.resolve(__dirname, 'src/components/HomeText/HomeText.jsx'),
-			ContactText  : path.resolve(__dirname, 'src/components/ContactText/ContactText.jsx'),
-			FrameworkNav : path.resolve(__dirname, 'src/components/FrameworkNav/FrameworkNav.jsx'),
-			MainNav      : path.resolve(__dirname, 'src/components/MainNav/MainNav.jsx'),
-			Twinkle      : path.resolve(__dirname, 'src/components/Twinkle/Twinkle.jsx'),
-			commonJS     : path.resolve(__dirname, 'src/js/common.js')
+			MainView      : path.resolve(__dirname, 'src/views/MainView.jsx'),
+			ArtView       : path.resolve(__dirname, 'src/views/ArtView.jsx'),
+			PortfolioView : path.resolve(__dirname, 'src/views/PortfolioView.jsx'),
+			ResumeView    : path.resolve(__dirname, 'src/views/ResumeView.jsx'),
+			HomeContent   : path.resolve(__dirname, 'src/components/HomeContent/HomeContent.jsx'),
+			HomeText      : path.resolve(__dirname, 'src/components/HomeText/HomeText.jsx'),
+			ContactText   : path.resolve(__dirname, 'src/components/ContactText/ContactText.jsx'),
+			FrameworkNav  : path.resolve(__dirname, 'src/components/FrameworkNav/FrameworkNav.jsx'),
+			MainNav       : path.resolve(__dirname, 'src/components/MainNav/MainNav.jsx'),
+			Twinkle       : path.resolve(__dirname, 'src/components/Twinkle/Twinkle.jsx'),
+			commonJS      : path.resolve(__dirname, 'src/js/common.js')
 		},
 		extensions: ['.js', '.jsx']
 	},
