@@ -31,6 +31,11 @@ class HomeContent extends React.Component {
   		}	
 	}
 
+	shouldComponentUpdate(nextProps, nextState) {
+	    if (this.state === nextState) return false;
+	    return true;
+	}
+
 	render () {
 		let updateMainViewState = this.props.updateMainViewState;
 
