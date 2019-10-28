@@ -1,4 +1,4 @@
-export const artData = [
+const artData = [
 	{
 		"id": 18,
 		"title": "Shakur",
@@ -228,3 +228,5 @@ export const artData = [
 		"linkText": ""
 	}
 ];
+
+export default artData;

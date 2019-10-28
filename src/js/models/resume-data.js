@@ -1,4 +1,4 @@
-export const resumeData = [
+const resumeData = [
 	{
 		"employer": "Disney",
 		"city": "Seattle",
@@ -348,4 +348,6 @@ export const resumeData = [
 		],
 		"skills": []
 	}
-]
+];
+
+export default resumeData;

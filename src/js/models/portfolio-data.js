@@ -1,4 +1,4 @@
-export const portfolioData = [
+const portfolioData = [
 	{
 		"class"		 : "maverickcatering top",
 		"url"		 : "http://maverickcatering.com",
@@ -55,4 +55,6 @@ export const portfolioData = [
 		"title"		 : "Death Trumpet",
 		"description": "This is a simple site I created for fun. The idea is having a quick bookmark that allows you to top off any sadness or death with the appropriate sound effect. Next time you need to take it over the top, this is the site for you. Share away and don't forget to use www.deathtrumpet.com in all of your social media post, comments, and everywhere else. Or just play it when all that BS legacy code finally goes bye bye........ Let's lay it to rest properly!"
 	}
-]
+];
+
+export default portfolioData;

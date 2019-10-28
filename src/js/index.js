@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MainView from 'MainView';
 import ImagePreloader from 'image-preloader';
-import { imgPreloadData } from 'PreloadData';
+import imgPreloadData from 'preloadData';
 
 // Get image peload data
 const preloadData = imgPreloadData();
