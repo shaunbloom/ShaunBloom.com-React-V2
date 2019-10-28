@@ -13,3 +13,8 @@ export const times = {
 	MEDIUM   : 1000,
 	FAST     : 500
 };
+
+export const noThumbnail = [
+	'eddie',
+	'man'
+];

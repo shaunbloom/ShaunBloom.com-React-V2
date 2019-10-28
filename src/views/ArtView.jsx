@@ -4,13 +4,24 @@ import artData from 'artData';
 class ArtView extends React.Component {
   	constructor(props) {
   	    super(props);
+        this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
+    }
+
+    handleThumbnailClick (e) {
+        const handleThumbnailOpen = this.props.handleThumbnailOpen;
+        e.preventDefault();
+
+        let name = e.target.dataset.name;
+
+        if (name) handleThumbnailOpen(name);
+        return;
     }
 
     renderThumbnail (data) {
         let article = data.map((d, i) => {
             return (
                 <article className="art-full" key={i}>
-                    <a className="thumb"  title="Click for full view">
+                    <a className="thumb"  title="Click for full view" onClick={this.handleThumbnailClick}>
                         <img name="tupac" src={d.thumbPath} className="section#art-page article img"  data-name={d.name} data-year={d.year} />
                         <footer>{d.name.charAt(0).toUpperCase() + d.name.slice(1)} '{d.year}</footer>
                     </a>
