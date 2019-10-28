@@ -8,9 +8,12 @@
 8) Set up ResumeView to build itself from JSON
 9) Set up ArtView to build itself from JSON
 10) Set up PortfolioView to build itself from JSON
-11) Set up image preloads
+11) DONE - Set up image preloads - DONE
 12) wireup loading sequence animations
 13) Convert PX to EM
 14) Get favicon working
 15) Get title working
 16) Wireup react router
+17) convert webpack requires to imports (es6)
+18) Hook-up twinkle
+
