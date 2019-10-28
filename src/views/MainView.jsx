@@ -3,12 +3,11 @@ import FrameworkNav from 'FrameworkNav';
 import MainNav from 'MainNav';
 import HomeContent from 'HomeContent';
 import ArtView from 'ArtView';
+import FullArtView from 'FullArtView';
 import PortfolioView from 'PortfolioView';
 import ResumeView from 'ResumeView';
 import { views, times } from 'commonJS';
 import FadeProps from 'fade-props';
-
-
 
 class MainView extends React.Component {
 	constructor(props) {
@@ -54,8 +53,9 @@ class MainView extends React.Component {
   	}
 
   	displayDynamicContent() {
-  		let showDynamic = this.state.showDynamic,
-  			currentView = this.state.currentView;
+  		let showDynamic  = this.state.showDynamic,
+  			currentView  = this.state.currentView,
+  			artFullClass = (currentView === views.FULL_ART_VIEW) ? 'art-full-page' : '';
 
   		if (!showDynamic) return;
 
@@ -71,7 +71,7 @@ class MainView extends React.Component {
   		}
 
   		return (
-			<section id="dynamic-content">
+			<section id="dynamic-content" className={artFullClass}>
 				<div id="close" onClick={this.onClose}></div>
 				{dynamicView()}
 			</section>
