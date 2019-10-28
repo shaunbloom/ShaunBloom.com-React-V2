@@ -1,7 +1,7 @@
-import { artData } from './art-data';
+import artData from 'artData';
 
 
-export const imgPreloadData = () => {
+const imgPreloadData = () => {
 	const imgPreloadUrls = [];
 
 	// preload core images
@@ -20,3 +20,5 @@ export const imgPreloadData = () => {
 
 	return imgPreloadUrls;
 }
+
+export default imgPreloadData;
