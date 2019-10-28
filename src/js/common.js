@@ -2,6 +2,7 @@ export const views = {
 	MAIN_VIEW     : 'main',
 	HOME_VIEW     : 'home',
 	ART_VIEW      : 'art',
+	FULL_ART_VIEW : 'fullart',
 	CONTACT_VIEW  : 'contact',
 	RESUME_VIEW   : 'resume',
 	PORTFOLIO_VIEW : 'portfolio'

@@ -1,0 +1,38 @@
+#dynamic-content {
+    &.art-full-page {
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    padding-top: 20px;
+	    width: 100%;
+	    z-index: 101;
+
+	    #close {
+	    	top: 30px;
+	    }
+
+	    article {
+	    	position: relative;
+		    width: 800px;
+		    margin: 0 auto;
+
+		    img {
+		        border: 2px solid #000;
+			    box-shadow: 5px 5px 5px #000;
+			    display: block;
+			}
+
+			#original-thumb {
+				position: absolute;
+			    top: 10px;
+			    left: 10px;
+			    z-index: 3;
+
+				img {
+				    height: 185px;
+				    width: 155px;
+				}
+			}
+	    }
+	}
+}

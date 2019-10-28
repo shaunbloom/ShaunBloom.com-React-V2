@@ -19,6 +19,7 @@ module.exports = {
 		alias: {
 			MainView      : path.resolve(__dirname, 'src/views/MainView.jsx'),
 			ArtView       : path.resolve(__dirname, 'src/views/ArtView.jsx'),
+			FullArtView   : path.resolve(__dirname, 'src/views/FullArtView.jsx'),
 			PortfolioView : path.resolve(__dirname, 'src/views/PortfolioView.jsx'),
 			ResumeView    : path.resolve(__dirname, 'src/views/ResumeView.jsx'),
 			ArtData       : path.resolve(__dirname, 'src/js/models/art-data.js'),
