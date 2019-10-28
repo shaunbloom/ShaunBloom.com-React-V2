@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "fade-props": "^2.1.1",
-    "mini-css-extract-plugin": "^0.8.0"
+    "mini-css-extract-plugin": "^0.8.0",
+    "image-preloader": "^1.1.1"
   }
 }
