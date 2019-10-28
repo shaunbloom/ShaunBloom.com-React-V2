@@ -25,7 +25,7 @@ class ArtView extends React.Component {
 
     purchaseLink(d) {
         if (d.purchase) {
-            return (<a href="{d.smallpaper}" className="purchase-link" target="_blank">{d.linkText}</a>);
+            return (<a href={d.smallpaper} className="purchase-link" target="_blank">{d.linkText}</a>);
         }
 
         return (<span className="purchase-link-blank"><br/></span>);
