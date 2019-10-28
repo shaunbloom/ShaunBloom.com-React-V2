@@ -1,0 +1,16 @@
+1) Fix Portfolio layout
+2) Get Font Awesome working via NPM
+3) Wireup Full Artwork view
+4) Build out sub components for the resume page
+5) Build out sub components for the portfolio page
+6) Build out sub components for the art page
+7) Build out sub components for the full art page
+8) Set up ResumeView to build itself from JSON
+9) Set up ArtView to build itself from JSON
+10) Set up PortfolioView to build itself from JSON
+11) Set up image preloads
+12) wireup loading sequence animations
+13) Convert PX to EM
+14) Get favicon working
+15) Get title working
+16) Wireup react router

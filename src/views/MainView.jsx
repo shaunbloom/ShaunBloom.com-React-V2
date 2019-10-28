@@ -39,10 +39,15 @@ class MainView extends React.Component {
 	    	<div>
 		    	<FrameworkNav />
 		    	<div id="wrapper">
-		    		<section id="content" className="drop-shadow main-content">
-		    			<HomeContent updateMainViewState={this.updateMainViewState}/>
-				    </section>
-				    {this.displayDynamicContent()}
+		    	<FadeProps animationLength={times.MEDIUM}>
+		    		<div>
+			    		<section id="content" className="drop-shadow main-content">
+			    			<HomeContent updateMainViewState={this.updateMainViewState}/>
+					    </section>
+				    
+				    	{this.displayDynamicContent()}
+				    </div>
+				    </FadeProps>
 		    	</div>
 		    </div>
 	    );
@@ -51,6 +56,8 @@ class MainView extends React.Component {
   	displayDynamicContent() {
   		let showDynamic = this.state.showDynamic,
   			currentView = this.state.currentView;
+
+  		if (!showDynamic) return;
 
   		const dynamicView = () => {
   			switch (currentView) {
@@ -63,17 +70,11 @@ class MainView extends React.Component {
   			}
   		}
 
-  		if (!showDynamic) return;
-
   		return (
-  			<section id="dynamic-content">
-  				<FadeProps animationLength={times.MEDIUM}>
-  					<div>
-	  					<div id="close" onClick={this.onClose}></div>
-	  					{dynamicView()}
-					</div>
-  				</FadeProps>
-  			</section>
+			<section id="dynamic-content">
+				<div id="close" onClick={this.onClose}></div>
+				{dynamicView()}
+			</section>
   		);
   	} 
 }
