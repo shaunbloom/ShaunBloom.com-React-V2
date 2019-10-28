@@ -14,17 +14,34 @@ class MainView extends React.Component {
 	    super(props);
 	    this.state = {
 	    	showDynamic: false,
-	    	currentView: views.HOME_VIEW
+	    	currentView: views.HOME_VIEW,
+	    	currentFullArtName: ''
 	    };
 
 	    this.updateMainViewState = this.updateMainViewState.bind(this);
+	    this.handleThumbnailOpen = this.handleThumbnailOpen.bind(this);
 	    this.onClose = this.onClose.bind(this);
 	}
 
 	onClose() {
+		const stateObj = {};
+
+		if (this.state.currentView !== views.FULL_ART_VIEW) {
+			stateObj.currentView = views.HOME_VIEW;
+			stateObj.showDynamic = false;
+		} else {
+			stateObj.currentView = views.ART_VIEW;
+			stateObj.showDynamic = true;
+		}
 		this.setState(()=> {
-			return ({showDynamic: false, currentView: views.HOME_VIEW})
+			return (stateObj)
 		});
+	}
+
+	handleThumbnailOpen(name) {
+		if (name) {
+			this.setState({currentView: views.FULL_ART_VIEW, currentFullArtName: name})
+		}
 	}
 
 	updateMainViewState (stateConfig) {
@@ -62,11 +79,14 @@ class MainView extends React.Component {
   		const dynamicView = () => {
   			switch (currentView) {
   				case views.ART_VIEW :
-  					return <ArtView />;
+  					return <ArtView handleThumbnailOpen={this.handleThumbnailOpen} />;
+  				case views.FULL_ART_VIEW :
+  					return <FullArtView thumbnailName={this.state.currentFullArtName} />;
   				case views.RESUME_VIEW :
   					return <ResumeView />;
   				case views.PORTFOLIO_VIEW :
   					return <PortfolioView />;
+
   			}
   		}
 
