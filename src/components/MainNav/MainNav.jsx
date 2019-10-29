@@ -28,7 +28,7 @@ import { views } from 'commonJS';
 
  	render () {
  		return (
- 			<header id="main" className="main-nav loaded"  onClick={this.setCurrentView}>
+ 			<header id="main" className="main-nav"  onClick={this.setCurrentView}>
 	    		<nav>
 	    			<ul>
 	    				<li className="overlay-link nav-link">

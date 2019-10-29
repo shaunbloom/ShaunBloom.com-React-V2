@@ -5,5 +5,15 @@
     right: 7.62em;
     top: 5.31em;
     width: 4.68em;
-    display: block;
+    opacity:0;
+
+    &.loaded {
+	  opacity: 1;
+	  transition: opacity .5s ease;
+	}
+	
+	&.visible {
+	  opacity: 0;
+	  transition: opacity .5s ease;
+	}
 }
