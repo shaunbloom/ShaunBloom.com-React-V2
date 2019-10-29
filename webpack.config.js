@@ -1,9 +1,12 @@
 const path 				= require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserJSPlugin = require('terser-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+	mode: devMode ? 'development' : 'production',
 	entry: {
 		index: ['@babel/polyfill', path.resolve(__dirname, './src/js/index.js'), path.resolve(__dirname, './src/css/styles.less')],
 	},
@@ -14,7 +17,7 @@ module.exports = {
 	devServer: {
 		contentBase: './dist'
 	},
-	devtool: 'cheap-module-eval-sourcemap',
+	devtool: devMode ? 'cheap-module-eval-sourcemap' : '',
 	resolve: {
 		alias: {
 			MainView      : path.resolve(__dirname, 'src/views/MainView.jsx'),
@@ -58,8 +61,8 @@ module.exports = {
 	            exclude: /node_modules/,
 	            use: [
 	                MiniCssExtractPlugin.loader,
-	                { loader: 'css-loader', options: { url: false, sourceMap: true } },
-	                { loader: 'less-loader', options: { sourceMap: true } }
+	                { loader: 'css-loader', options: { url: false, sourceMap: devMode ? true : false } },
+	                { loader: 'less-loader', options: { sourceMap: devMode ? true : false } }
 	            ],
 	        }
 		]
@@ -75,5 +78,17 @@ module.exports = {
 		      template: './src/css/styles.css',
 		      ignoreOrder: false // Enable to remove warnings about conflicting order
 		})
-	]
+	],
+	optimization: {
+		minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all'
+				}
+			}
+		}
+	}
 };

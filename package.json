@@ -1,15 +1,15 @@
 {
   "name": "reactwebpackbabel",
-  "version": "1.0.0",
-  "description": "Boilerplate with React/Webpack/Babel",
+  "version": "2.0.0",
+  "description": "REACT.SHAUNBLOOM.COM V2",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --hot --mode development",
-    "build": "webpack --mode production",
+    "start": "NODE_ENV=development webpack-dev-server --open --hot --mode=development",
+    "build": "NODE_ENV=production webpack --open --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shaun Bloom",
-  "license": "ISC",
+  "license": "",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/polyfill": "^7.6.0",
@@ -17,21 +17,21 @@
     "@babel/preset-react": "^7.6.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "fade-props": "^2.1.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "image-preloader": "^1.1.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router": "^5.1.2",
     "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.2.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.9.0"
-  },
-  "dependencies": {
-    "fade-props": "^2.1.1",
-    "mini-css-extract-plugin": "^0.8.0",
-    "image-preloader": "^1.1.1"
+    "webpack-dev-server": "^3.8.2"
   }
 }
