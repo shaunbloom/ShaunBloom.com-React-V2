@@ -1,26 +1,28 @@
-2) Get Font Awesome working via NPM
+02) Get Font Awesome working via NPM
 
-13) Convert PX to EM
+
 14) Get favicon working
 
 16) Wireup react router
 17) Setup dynamic titles when router is in place
 
 20) Add class package to handle dynamic classes
+21) Fix white border on inital load
 
 
 
-1) DONE - Fix Portfolio amd FullArt layout - DONE
-3) DONE - Wireup Full Artwork view - DONE
-4) DONE - Build out sub components for the resume page - DONE
-5) DONE - Build out sub components for the portfolio page - DONE
-6) DONE - Build out sub components for the art page - DONE
-7) DONE - Build out sub components for the full art page - DONE
-8) DONE - Set up ResumeView to build itself from JSON - DONE
-9) DONE - Set up ArtView to build itself from JSON - DONE
+01) DONE - Fix Portfolio amd FullArt layout - DONE
+03) DONE - Wireup Full Artwork view - DONE
+04) DONE - Build out sub components for the resume page - DONE
+05) DONE - Build out sub components for the portfolio page - DONE
+06) DONE - Build out sub components for the art page - DONE
+07) DONE - Build out sub components for the full art page - DONE
+08) DONE - Set up ResumeView to build itself from JSON - DONE
+09) DONE - Set up ArtView to build itself from JSON - DONE
 10) DONE - Set up PortfolioView to build itself from JSON - DONE
 11) DONE - Set up image preloads - DONE
 12) DONE - wireup loading sequence animations - DONE
+13) DONE - Convert PX to EM - DONE
 15) DONE - Get title working - DONE
 18) TRIED - convert webpack requires to imports (es6) - TRIED
 19) DONE - Hook-up twinkle - DONE
