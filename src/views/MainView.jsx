@@ -57,7 +57,7 @@ class MainView extends React.Component {
 		    	<div id="wrapper">
 		    	<FadeProps animationLength={times.MEDIUM}>
 		    		<div>
-			    		<section id="content" className="drop-shadow main-content">
+			    		<section id="content" className="drop-shadow main-content overflow-hidden">
 			    			<HomeContent updateMainViewState={this.updateMainViewState}/>
 					    </section>
 				    
