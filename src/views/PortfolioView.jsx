@@ -10,12 +10,12 @@ class PortfolioView extends React.Component {
         let article = data.map((d, i) => {
             return (
                 <article className={d.class} key={i}>
-                    <a href={d.url}>
+                    <a target="_blank" href={d.url}>
                         <img className="img-responsive img-border img-left hidden-xs" src={d.imgSrc} alt={d.title} />
                     </a>
                     <div className="description">
                         <div className="title">{d.title}</div>
-                        <a href={d.url}>
+                        <a target="_blank" href={d.url}>
                           <i className="fa fa-eye">
                               <span>view</span>
                           </i>
