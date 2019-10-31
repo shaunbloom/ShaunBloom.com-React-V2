@@ -5,11 +5,12 @@ import React from 'react';
  	render () {
  		return (
  			<nav className="framework-nav">
-		        <ul>
-		        	<li><a className="fw-link selected" data-framework="vanilla" title="Latest build with Webpack and Babel using the latest vanillia ES6">Vanilla/ES6</a></li>
-		            <li><a className="fw-link" data-framework="jquery" title="Original site build with JQuery">Jquery</a></li>
-		            <li><a className="fw-link" data-framework="angular" title="Rebuilt the original site in Angular to look and act exactly the same">AngularJS</a></li>
-		            <li><a className="fw-link" data-framework="react" title="Rebuilt the original site in ReactJS to look and act exactly the same" e="">ReactJS</a></li>
+		    	<ul>
+		            <li><a href="http://www.shaunbloom.com" class="fw-link" data-framework="jquery" title="Original site built with JQuery in '12">Jquery '12</a></li>
+		            <li><a href="http://angular.shaunbloom.com" class="fw-link" data-framework="angular" title="Rebuilt site in Angular to look and function exactly the same as the original JQuery version">Angular '15</a></li>
+		            <li><a href="http://react.shaunbloom.com" class="fw-link" data-framework="react" title="Original React (V 0.14) build out from 2015. Made to look and function exactly as the original JQuery version.">React '15</a></li>
+		            <li><a href="http://react2.shaunbloom.com" class="fw-link" data-framework="react2" title="Latest React build (V 16) using webpack, babel and es6. Made to look and function exactly as the original JQuery version.">React v2 '19</a></li>
+		            <li><a href="http://vanilliajs.shaunbloom.com" class="fw-link selected" data-framework="vanilla" title="Latest build with Webpack, Babel and less using the latest vanillia ES6. Made to look and function exactly as the original JQuery version.">Vanilla '19</a></li>
 		        </ul>
 	    	</nav>
 	    );
