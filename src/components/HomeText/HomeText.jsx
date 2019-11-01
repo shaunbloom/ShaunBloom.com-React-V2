@@ -28,7 +28,7 @@ class HomeText extends React.Component {
 				        </tr>
 				        <tr>
 					        <td className="name">Motto:</td>
-				    	    <td className="value pad">Don't cry over spilt milk, cry over David Lee Roth's hair now!</td>
+				    	    <td className="value pad">Don't cry over spilled milk, cry over David Lee Roth's hair now!</td>
 				        </tr>
 				        <tr>
 					        <td className="name">Objective:</td>
