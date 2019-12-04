@@ -12,10 +12,9 @@ class HomeContent extends React.Component {
 		this.state = {
 			currentView: views.HOME_VIEW
 	    };
-	    this.updateMainNavState = this.updateMainNavState.bind(this);	
 	}
 
-	updateMainNavState (stateConfig) {
+	updateMainNavState = (stateConfig) => {
 		this.setState(()=> {
 			return (stateConfig)
 		});

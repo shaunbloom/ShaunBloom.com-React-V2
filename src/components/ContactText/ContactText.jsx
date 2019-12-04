@@ -5,10 +5,9 @@ import { views } from 'commonJS';
 class ContactText extends React.Component {
     constructor(props) {
         super(props);
-        this.setCurrentView = this.setCurrentView.bind(this);
     }
 
-    setCurrentView () {
+    setCurrentView = () => {
         let updateState = this.props.updateState;
 
         updateState({ currentView: views.HOME_VIEW });

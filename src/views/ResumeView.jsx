@@ -1,7 +1,7 @@
 import React from 'react';
 import resumeData from 'resumeData';
 
-class PortfolioView extends React.Component {
+class ResumeView extends React.Component {
 	constructor(props) {
 	    super(props);
     }
@@ -9,7 +9,7 @@ class PortfolioView extends React.Component {
     renderEmployer(data) {
 	    let employer = data.map((d, i) => {
 	        return (
-	        	<div>
+	        	<div key={i}>
 		        	<div className="job-employer" key={i}>
 		                <p><strong><em>{d.employer}</em></strong> • {d.city}, {d.state} {d.startDate} - {d.endDate}</p>
 		                <p><strong>{d.jobTitle}</strong></p>
@@ -66,4 +66,4 @@ class PortfolioView extends React.Component {
 	}
 };
 
-export default PortfolioView;
+export default ResumeView;
