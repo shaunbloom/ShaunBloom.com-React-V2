@@ -17,13 +17,9 @@ class MainView extends React.Component {
 	    	currentView: views.HOME_VIEW,
 	    	currentFullArtName: ''
 	    };
-
-	    this.updateMainViewState = this.updateMainViewState.bind(this);
-	    this.handleThumbnailOpen = this.handleThumbnailOpen.bind(this);
-	    this.onClose = this.onClose.bind(this);
 	}
 
-	onClose() {
+	onClose = () => {
 		const stateObj = {};
 
 		if (this.state.currentView !== views.FULL_ART_VIEW) {
@@ -38,13 +34,13 @@ class MainView extends React.Component {
 		});
 	}
 
-	handleThumbnailOpen(name) {
+	handleThumbnailOpen = (name) => {
 		if (name) {
 			this.setState({currentView: views.FULL_ART_VIEW, currentFullArtName: name})
 		}
 	}
 
-	updateMainViewState (stateConfig) {
+	updateMainViewState = (stateConfig) => {
 		this.setState(()=> {
 			return (stateConfig)
 		});

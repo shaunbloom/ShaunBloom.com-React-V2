@@ -4,10 +4,9 @@ import artData from 'artData';
 class ArtView extends React.Component {
   	constructor(props) {
   	    super(props);
-        this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
     }
 
-    handleThumbnailClick (e) {
+    handleThumbnailClick = (e) => {
         const handleThumbnailOpen = this.props.handleThumbnailOpen;
         e.preventDefault();
 

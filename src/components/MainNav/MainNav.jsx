@@ -5,10 +5,9 @@ import { views } from 'commonJS';
  class MainNav extends React.Component {
  	constructor(props) {
 	    super(props);
-	    this.setCurrentView = this.setCurrentView.bind(this);
     }
 
-    setCurrentView (e) {
+    setCurrentView = (e) => {
     	e.preventDefault();
     	let newView   = e.target.dataset.section,
     		stateObj = {};
