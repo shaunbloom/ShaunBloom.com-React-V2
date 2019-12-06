@@ -49,7 +49,7 @@ class ResumeView extends React.Component {
 	render() {
 		return (
 			<div id="resume-page">
-				<h1 className="pageTitle">Resume &mdash; <a href="//shaunbloom.com/download/Shaun_Bloom_Resume.docx">DOWNLOAD</a></h1>
+				<h1 className="pageTitle">Resume &mdash; <a href="//shaunbloom.com/download/Shaun_Bloom--Resume.docx">DOWNLOAD</a></h1>
 				<p><strong>Objective:</strong> To use my experience and knowledge of web-based technologies, object oriented programming, and application development in a high tech solution based environment.<br/><br/></p>
 				<p><strong>Professional Experience:</strong></p>
 
