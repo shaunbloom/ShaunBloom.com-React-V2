@@ -7,6 +7,7 @@
     overflow: hidden;
     padding: 0 3.12em 1.25em;
     width: 43.75em;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 
     &.main-content {
     	width: 43.75em;
@@ -14,22 +15,191 @@
     	h1 {
     		font-size: 1.17em;
 		    margin-left: 0;
+		}
+    }
 
-		    a {
-			    font-size: .87em;
-			    text-decoration: none;
+    .title {
+    	font-size: 1.5em;
+    }
+
+    .download-link {
+    	color: #f56942;
+	    float: right;
+	    font-size: .67em;
+	    text-decoration: none;
+	    margin: -.35em .31em 0 0;
+
+	    &:hover {
+	    	text-decoration: underline;
+	    };
+    }
+
+    header {
+    	color: #f56942;
+	    font-size: 1.87em;
+	    border-bottom: 1px solid #75706e;
+	    margin-bottom: .12em;
+	    text-align: center;
+	    letter-spacing: .2em;
+
+    	.sub-text {
+    		color: #75706e;
+    		font-size: .75em;
+    		font-style: italic;
+    		letter-spacing: normal;
+    	}
+    }
+    .contact-info {
+    	background-color: #eee;
+    	display: flex;
+			flex-wrap: nowrap;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: flex-end;
+    	color: #5e5b5a;
+    	padding: .18em 0;
+
+    	i {
+    		font-size: 1.06em;
+    	}
+    	.contact-info-text {
+	    	font-size: .87em;
+			padding: 0 .56em 0 .12em;
+
+	    	a {
+	    		color: #5e5b5a;
+	    	}
+	    }
+    }
+
+    .resume-body {
+    	padding: 0 1.25em;
+    }
+
+    .summary {
+    	.column-a {
+			float: left;
+			width: 65%;
+			padding-right: 1.25em;
+
+			h2 {
+				font-size: 1.43em;
+				color: #f56942;
+				letter-spacing: .31em;
+				font-weight: normal;
+				margin-bottom: .62em;
+				text-transform: uppercase;
+			}
+			.summary-text {
+				font-size: 1em;
+				margin-bottom: 1.25em;
+			}
+		}
+
+		.column-b {
+			float: right;
+			width: 31%;
+
+			h2 {
+				font-size: 1.25em;
+				color: #5e5b5a;
+				letter-spacing: .12em;
+				font-weight: normal;
+				border-bottom: 1px solid #5e5b5a;
+				text-transform: uppercase;
+				padding-top: .31em;
+				margin-bottom: .31em;
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					font-size: 1em;
+					font-weight: bold;
+					line-height: 1.68em;
+				}
 			}
 		}
     }
 
-    .job-employer {
-	    clear: both;
-	    display: block;
-	    overflow: hidden;
-	    margin-bottom: 1.25em;
+    .professional-experience {
+    	clear: both;
 
-	    ul li {
-		    margin-bottom: .31em;
+    	.job {
+
+    		.company {
+    			background-color: #eee;
+    			color: #5e5b5a;
+    			font-weight: bold;
+    			padding: .18em;
+    			margin-bottom: .12em;
+    			clear: both;
+
+    			.company-date {
+    				float: right;
+    			}
+    		}
+
+    		.title {
+    			color: #f56942;
+    			text-transform: uppercase;
+    			margin-bottom: .25em;
+    			font-size: 1.06em;
+    		}
+
+    		.frameworks-tools {
+    			color: #5e5b5a;
+    			font-style: italic;
+    		}
+
+    		.responsibilities {
+    			ul {
+    				list-style-type: square;
+    				margin: .31em 0 1.25em 0;
+
+    				li {
+    					padding: .18em 0;
+    				}
+    			}
+    		}
+    	}
+    }
+
+    .additional-engagements {
+		.title {
+			color: #f56942;
+			font-size: 1.06em;
 		}
+	}
+
+	.special-projects {
+		.project {
+			margin: .31em 0;
+		}
+
+		a {
+			color: #f56942;
+		}
+	}
+
+	.ongoing-recent {
+		.training {
+			margin: .31em 0;
+		}
+	}
+
+	.professional-experience, .special-projects,  .ongoing-recent {
+		h2 {
+    		border-bottom: 1px solid #5e5b5a;
+			text-transform: uppercase;
+			font-size: 1.25em;
+			color: #75706e;
+			letter-spacing: .31em;
+			margin-bottom: 0;
+			font-weight: normal;
+    	}
 	}
 }
