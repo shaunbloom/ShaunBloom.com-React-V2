@@ -1,5 +1,5 @@
 import React from 'react';
-import { noThumbnail } from 'commonJS';
+import { noThumbnail } from '../js/common';
 
 class FullArtView extends React.Component {
 	constructor(props) {
