@@ -3,20 +3,20 @@ import ReactDom from 'react-dom';
 import Enzyme from 'enzyme';
 import {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import ContactText from './ContactText.jsx';
+import FrameworkNav from './FrameworkNav.jsx';
 import expect from 'expect';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ContactText Component', function () {
+describe('FrameworkNav Component', function () {
 	let component;
 
 	beforeEach(() => {
-		component = shallow(<ContactText />);
+		component = shallow(<FrameworkNav />);
 	});
 
 	it('renders without problems', function () {
-		var ContactTextHtml = component.find("#contact-page");
-		expect(ContactTextHtml.length).toBe(1);
+		var FrameworkNavHtml = component.find(".framework-nav");
+		expect(FrameworkNavHtml.length).toBe(1);
 	});
 });

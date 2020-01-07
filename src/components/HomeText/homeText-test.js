@@ -3,20 +3,20 @@ import ReactDom from 'react-dom';
 import Enzyme from 'enzyme';
 import {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import ContactText from './ContactText.jsx';
+import HomeText from './HomeText.jsx';
 import expect from 'expect';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('ContactText Component', function () {
+describe('HomeText Component', function () {
 	let component;
 
 	beforeEach(() => {
-		component = shallow(<ContactText />);
+		component = shallow(<HomeText />);
 	});
 
 	it('renders without problems', function () {
-		var ContactTextHtml = component.find("#contact-page");
-		expect(ContactTextHtml.length).toBe(1);
+		var HomeTextHtml = component.find("#home-page");
+		expect(HomeTextHtml.length).toBe(1);
 	});
 });

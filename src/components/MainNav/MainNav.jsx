@@ -1,5 +1,5 @@
 import React from 'react';
-import { views } from 'commonJS';
+import { views } from '../../js/common';
 
 
  class MainNav extends React.Component {
