@@ -25,7 +25,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-preloader": "^1.1.1",
-    "karma": "^5.2.3",
+    "karma": "^6.3.16",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
     "karma-firefox-launcher": "^1.2.0",
